@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h5{
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .menu{
+            width: 15%;
+            height: 100vh;
+            float: left;
+            background-color: rgb(57, 7, 185);
+            position: fixed;
+        }
+        .h{
+            font-size: 15px;
+            color: #000;
+            padding: 2px 7px;
+            border-radius: 50%;
+            background: rgb(24, 131, 198);
+        }
+        .h5{
+          width: 180px;
+          
+          font-size: 15px;
+          margin: 5px 10px;
+          padding-right: 70px;
+          
+        }
+        .h5:hover{
+            background-color: #fff;
+          color: #000;
+          border-radius: 6px;
+        }
+        ul li:hover{
+           
+          background-color: #fff;
+          color: #000;
+         
+          
+        
+          border-radius: 6px; 
+        }
+        .h5 i{
+            padding: 2px 10px;
+        }
+        ul li{
+            font-size: 15px;
+            width: 180px;
+            padding: 15px;
+            color: #fff;
+            margin: 5px 10px;
+            padding-right: 70px;
+        }
+        
+        .ul{
+            position: relative;
+            top: 130px;
+        }
+        
+        .ul li i{
+            padding-left: 40px;
+        }
+       .dashboard{
+        width: 85%;
+        height: 110vh;
+        float: right;
+        background-color: rgb(252, 245, 245);
+      
+       }
+       .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+       
+        
+       }
+       .header1{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+       }
+       .input{
+        width: 220px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 300px;
+       }
+       input{
+        background-color: #fff;
+        border: none;
+        outline: none;
+       }
+       .img{
+        width: 30px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 33px;
+        right: 50px;
+       }
+       .p{
+        position: relative;
+        bottom: 68px;
+        
+       }
+       .box{
+        width: 200px;
+        background-color: #fff;
+        padding: 0px;
+        margin: 20px;
+        border-radius: 12px;
+       }
+       .box i{
+        position: relative;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+      text-align: center;
+        border-radius: 50%;
+        background-color: purple;
+        box-shadow: 1px 1px 10px purple;
+        margin: 10px;
+       }
+       .home{
+        display: flex;
+        justify-content: space-around;
+       }
+       .chap{
+        width: 600px;
+        height: 530px;
+        background-color: #fff;
+        position: relative;
+        left: 60px;
+        border-radius: 8px;
+        float: left;
+       }
+       .pp i{
+        padding-left: 10px;
+       }
+       .chap i{
+        color: grey;
+       }
+       .home-page a{
+        text-decoration: none;
+        position: relative;
+        left: 400px;
+       }
+       .right{
+        float: right;
+        width: 350px;
+        height: 300px;
+        background-color: #fff;
+        position: relative;
+        right: 100px;
+        border-radius: 8px;
+       }
+       .my{
+        width: 85%;
+        height: 100vh;
+        float: right;
+        background-color:  rgb(252, 245, 245);
+       }
+       .setting{
+        width: 85%;
+        height: 100vh;
+        float: right;
+        background-color:  rgb(252, 245, 245);
+       }
+       .project{
+        width: 85%;
+        height: 200vh;
+        float: right;
+        background-color:  rgb(252, 245, 245);
+       }
+       .h4 h4 i{
+        padding-right: 10px;
+       }
+       .skill-bar{
+        width: 210px;
+        background: green;
+        height: 10px;
+        border-radius: 100px;
+        position: relative;
+       right: 270px;
+       bottom: 50px;
+       
+       }
+        .skill-fill{
+          background: blue;
+          height: 20px;
+          border: 100px;
+          z-index: 22;
+        }
+        .html{
+          width: 300px;
+        }
+        .skill-percent{
+          position: relative;
+          bottom: 65px;
+          right: 30px;
+        }
+        .setting ul li {
+          color: #000;
+          padding: 10px 5px;
+          list-style: none;
+          float: left;
+          margin: 1px 10px;
+        }
+        .setting ul{
+          width: 20%;
+          
+        }
+    </style>
+</head>
+<body>
+    <section class="menu">
+       <h5>  <i class="fa-brands fa-chrome"></i>  Dashhhboard <span class="h">+</span></h5>
+       <h5 class="h5"> <i class="fa-regular fa-rectangle-list"></i>Dashboard</h5>
+     <ul>
+        <li> <i class="fa-solid fa-clipboard-list"></i> Project</li>
+        <li> <i class="fa-regular fa-circle-check"></i> My task</li>
+        <li> <i class="fa-solid fa-chart-line"></i> Activity</li>
+        <li> <i class="fa-solid fa-users"></i> Team</li>
+        <li> <i class="fa-solid fa-comment-dots"></i> Message</li>
+        <li> <i class="fa-solid fa-gear"></i> Settings</li>
+     </ul>
+     <ul class="ul">
+        <li>Workspace</i></li>
+        <li> <span style=" padding: 1px 10px; border-radius: 50%; background: rgb(224, 12, 111);"></span>Superboard</li>
+     </ul>
+    </section>
+   <section class="dashboard">
+       <div class="header">
+        <h1 style="position: relative;left: 40px;">Dashboard</h1>
+       <div class="left">
+        <div class="input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search anything...">
+        </div>
+        <i class="fa-solid fa-bell" style="position: relative; bottom: 45px; right: 70px;"></i>
+        <img class="img" src="jackson.jpg" alt=""><p style=" position: relative;
+        bottom: 65px; left: 10px; ">Jackson Pierce <i class="fa-solid fa-caret-down" style="color: #afb5c0;"></i></p>
+       </div>
+       </div>
+   
+       <div class="home">
+        <div class="box">
+           
+            <p>  <i class="fa-regular fa-clipboard"></i> Assigned Task </p><h1 style="position: relative; left: 40px; top: -10px;">05</h1>
+        </div>
+        <div class="box">
+           
+            <p>  <i class="fa-solid fa-circle-check" style="color: #0561ff; font-size: 20px; box-shadow: 1px 1px 10px #0561ff;background: transparent;"></i></i> Task Complete </p><h1 style="position: relative; left: 40px; top: -10px;">15</h1>
+        </div>
+        <div class="box">
+           
+            <p>  <i class="fa-regular fa-clipboard"></i> Objective Complete </p><h1 style="position: relative; left: 40px; top: -10px;">37</h1>
+        </div>
+        <div class="box">
+           
+            <p>  <i class="fa-regular fa-clipboard"></i> Project Complete</p><h1 style="position: relative; left: 40px; top: -10px;"> 61% </h1>
+        </div>
+       </div>
+       <div class="home-page">
+        <h3 style="position: relative; left: 65px;">Today Task (3) <a href="#">See all</a></h3>
+       <br>
+       <div class="chap">
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">Bookum App <img style="width: 150px;position: relative;right: 40px; float: right;" src="https://th.bing.com/th/id/OIP.pX6J67vs3TzWe5FqozlClwHaFB?pid=ImgDet&w=599&h=406&rs=1" alt=""></p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> Today <i class="fa-solid fa-list-ul"></i> <i class="fa-solid fa-scroll"></i> 2 Attachment <i class="fa-solid fa-flag" style="color: orange;"></i> Medium</p>
+        
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">SWYFT</p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-regular fa-circle" style="color:grey; position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> 31Sep<i class="fa-solid fa-list-ul"></i> 5 Objective <i class="fa-solid fa-scroll"></i>. <i class="fa-solid fa-flag" style="color: red;"></i>High</p>
+       
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">Sunstone  <img style="width: 120px;position: relative;right: 40px; float: right; top: -10px;"src="https://th.bing.com/th/id/R.1a1de7af8cb795e36b75a58278116efb?rik=PAmmK3%2f8bmgoBg&pid=ImgRaw&r=0" alt=""></p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-regular fa-circle" style="color:grey; position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> 31Sep <i class="fa-solid fa-list-ul"></i> 5 Objective <i class="fa-solid fa-scroll" ></i> 1 Attachment <i class="fa-solid fa-flag" style="color: rgb(53, 233, 161);"></i> Low</p>
+        
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">Sunstone</p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-regular fa-circle" style="color:grey; position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> 31 Sep <i class="fa-solid fa-list-ul"></i> <i class="fa-solid fa-scroll"></i> 1 Attachment <i class="fa-solid fa-flag" style="color: orange;"></i> Low</p>
+       
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">SWYFT</p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-regular fa-circle" style="color:grey; position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> 31 Sep <i class="fa-solid fa-list-ul"></i> <i class="fa-solid fa-scroll"></i>. <i class="fa-solid fa-flag" style="color: red;"></i> High</p>
+       
+        <p style="position: relative;padding: 2px; font-size: 13px; color: grey; left: 40px; top: 10px;">Sunstone <img style="width: 120px;position: relative;right: 40px; float: right; top: -20px;" src="https://www.geeky-gadgets.com/wp-content/uploads/2011/02/samsung-galaxy-s-wifi-5-0_3.jpg" alt=""></p>
+        <h4 style="position: relative; padding: 5px 19px;"><i class="fa-regular fa-circle" style="color:grey; position: relative; right: 10px; top: 15px; font-size: 19px;"></i> Design feedback on wireframe</h4>
+        <p class="pp" style="position: relative; padding: 10px 30px; "><i class="fa-solid fa-bag-shopping"></i> 31 Sep <i class="fa-solid fa-list-ul"></i> <i class="fa-solid fa-scroll"></i> 2 Attachment <i class="fa-solid fa-flag" style="color: rgb(53, 233, 161);"></i> Low</p>
+       
+    </div>
+    <div class="right">
+       
+        <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;">SWYFT * Yesterday at 09.30am</p>
+        <h4 style="position: relative; padding: 2px; left: 10px; top: 10px;">F&B Landing Page V2 Work Area</h4>
+        <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;"><i class="fa-solid fa-circle-stop" style="color: #5f4195;"></i> Omnicreativora changed due date <a href="#" style="color:blue; text-decoration: none; position: relative; left: -1px;">Sep 21-21.</a></p>
+    <br>
+        <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;">SWYFT * Yesterday at 09.30am</p>
+        <h4 style="position: relative; padding: 2px; left: 10px; top: 10px;">F&B Landing Page V2 Work Area</h4>
+        <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;"><i class="fa-solid fa-circle-stop" style="color: #5f4195;"></i> Omnicreativora changed due date <a href="#" style="color:blue; text-decoration: none; position: relative; left: -1px;">Sep 21-21.</a></p>
+    <br>
+    <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;">SWYFT * 21 Sep at 09.30am</p>
+        <h4 style="position: relative; padding: 2px; left: 10px; top: 10px;">Sunstone Design Feedbacks</h4>
+        <p style="position: relative; padding: 2px; font-size: 13px; color: grey; left: 10px; top: 10px;"><i class="fa-solid fa-circle-stop" style="color: #5f4195;"></i> Omnicreativora changed due date </p>
+        <img src="screen.jpg" style="width: 350px; position: relative;top: 5px;" alt="">
+        <div class="foot">
+          <h3>Ongoning Project </h3>
+          <img src="screeen.jpg" width="350px" alt="">
+        </div>
+    </div>
+</div>
+   </section>
+<section class="project">
+    <div class="header">
+        <h1 style="position: relative;left: 40px;">Project</h1>
+       <div class="left">
+        <div class="input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search anything...">
+        </div>
+        <i class="fa-solid fa-bell" style="position: relative; bottom: 45px; right: 70px;"></i>
+        <img class="img" src="jackson.jpg" alt=""><p style=" position: relative;
+        bottom: 65px; left: 10px; ">Jackson Pierce <i class="fa-solid fa-caret-down" style="color: #afb5c0;"></i></p>
+       </div>
+       </div>
+       <div class="image" style="display: flex; ">
+        <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: 40px;">
+            <img src="1.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+        </div>
+        <h4 style="position: absolute; left: 280px; top: 1060px;">SWYFT</h4>
+        <div class="i" style="position: relative; top: 140px; left: 11px;">
+         
+         <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+         top: 5px;
+         border-radius: 50%;
+         position: relative;
+        right: 30px;
+         " alt="">
+          <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+          top: 5px;
+          border-radius: 50%;
+          position: relative;
+          " alt="">
+          <div class="p" style="color: grey;">
+           <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+            <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+            <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+          </div>
+          <div class="skill-area">
+            <div class="skill">
+                <div class="skill-bar"></div>
+                  <div class="html">
+                    <span class="skill-percent">
+                      80%
+                    </span>
+                  </div>
+                
+            </div>
+          </div>
+        </div>
+        <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: -200px;">
+          <img src="3.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+      </div>
+      <h4 style="position: absolute; left: 660px; top: 1060px;">SWYFT</h4>
+      <div class="i" style="position: relative; top: 140px; left:-230px;">
+       
+       <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+       top: 5px;
+       border-radius: 50%;
+       position: relative;
+      right: 30px;
+       " alt="">
+        <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+        top: 5px;
+        border-radius: 50%;
+        position: relative;
+        " alt="">
+        <div class="p" style="color: grey;">
+         <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+          <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+          <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+        </div>
+        <div class="skill-area">
+          <div class="skill">
+              <div class="skill-bar"></div>
+                <div class="html">
+                  <span class="skill-percent">
+                    80%
+                  </span>
+                </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: -430px;">
+        <img src="4.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+    </div>
+    <h4 style="position: absolute; right: 358px; top: 1060px;">SWYFT</h4>
+    <div class="i" style="position: relative; top: 140px; left: -460px;">
+     
+     <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+     top: 5px;
+     border-radius: 50%;
+     position: relative;
+    right: 30px;
+     " alt="">
+      <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+      top: 5px;
+      border-radius: 50%;
+      position: relative;
+      " alt="">
+      <div class="p" style="color: grey;">
+       <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+        <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+        <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+      </div>
+      <div class="skill-area">
+        <div class="skill">
+            <div class="skill-bar"></div>
+              <div class="html">
+                <span class="skill-percent">
+                  80%
+                </span>
+              </div>
+            
+        </div>
+      </div>
+    </div>
+       </div>
+       <br><br>
+       <div class="image" style="display: flex; ">
+        <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: 40px;">
+            <img src="5.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+        </div>
+        <h4 style="position: absolute; left: 280px; top: 1060px;">SWYFT</h4>
+        <div class="i" style="position: relative; top: 140px; left: 11px;">
+         
+         <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+         top: 5px;
+         border-radius: 50%;
+         position: relative;
+        right: 30px;
+         " alt="">
+          <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+          top: 5px;
+          border-radius: 50%;
+          position: relative;
+          " alt="">
+          <div class="p" style="color: grey;">
+           <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+            <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+            <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+          </div>
+          <div class="skill-area">
+            <div class="skill">
+                <div class="skill-bar"></div>
+                  <div class="html">
+                    <span class="skill-percent">
+                      80%
+                    </span>
+                  </div>
+                
+            </div>
+          </div>
+        </div>
+        <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: -200px;">
+          <img src="1.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+      </div>
+      <h4 style="position: absolute; left: 660px; top: 1060px;">SWYFT</h4>
+      <div class="i" style="position: relative; top: 140px; left:-230px;">
+       
+       <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+       top: 5px;
+       border-radius: 50%;
+       position: relative;
+      right: 30px;
+       " alt="">
+        <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+        top: 5px;
+        border-radius: 50%;
+        position: relative;
+        " alt="">
+        <div class="p" style="color: grey;">
+         <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+          <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+          <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+        </div>
+        <div class="skill-area">
+          <div class="skill">
+              <div class="skill-bar"></div>
+                <div class="html">
+                  <span class="skill-percent">
+                    80%
+                  </span>
+                </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="img" style="width: 330px; height: 230px; background-color: #fff; border-radius: 8px;position: relative; left: -430px;">
+        <img src="4.png" style="width: 320px; position: relative; left: 8px;top: 5px;" alt="">
+    </div>
+    <h4 style="position: absolute; right: 358px; top: 1060px;">SWYFT</h4>
+    <div class="i" style="position: relative; top: 140px; left: -460px;">
+     
+     <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+     top: 5px;
+     border-radius: 50%;
+     position: relative;
+    right: 30px;
+     " alt="">
+      <img class="img" src="jackson.jpg" style=" width: 30px;height: 30px;
+      top: 5px;
+      border-radius: 50%;
+      position: relative;
+      " alt="">
+      <div class="p" style="color: grey;">
+       <p style="position: relative;left: -270px; top: 50px;"> <i class="fa-solid fa-bag-shopping"></i> 22.10.201</p>
+        <p style="position: relative;left: -170px; top: 32px;"><i class="fa-solid fa-list-ul"></i> 3</p>
+        <p style="position: relative;left: -120px;top: 13px; "><i class="fa-regular fa-circle-check"></i> 10</p>
+      </div>
+      <div class="skill-area">
+        <div class="skill">
+            <div class="skill-bar"></div>
+              <div class="html">
+                <span class="skill-percent">
+                  80%
+                </span>
+              </div>
+            
+        </div>
+      </div>
+    </div>
+       </div>
+       <div class="project2">
+        <div class="imgh" style="width: 1090px; height: 150px; background-color: #fff;  position: relative; left: 40px;border-radius: 8px; ">
+         <div class="imgggg" style="display: flex; border-bottom: 1px solid grey;">
+          <img src="logo.png" alt="" style="position: relative;  width: 90px;height: 90px; margin: 10px;">
+          <p style="position: relative; top:30px;left: 10px;"><span style="color: grey;">Project</span>/Details <br> </p>
+          <h1 style="font-size: 30px;position: relative;top: 50px;right: 90px;">Sunstone App</h1>
+          <img src="logo-rasm.png" alt="" style="width: 100px;height: 50px; position: relative;top: 43px; right: 70px;">
+          <button style="color: #fff; background: #131358; width: 130px; height: 50px; border-radius: 12px; padding: 5px; position: relative; left: 450px; top: 35px;"> + Add Board</button> 
+         </div>
+         <div class="tagg" style="display: flex; padding: 10px; font-size: 19px; color: grey;">
+          <p style="color: #000;">Kanban </p>
+          <p style="padding-left: 20px;">List </p>
+          <p style="padding-left: 20px;"> Calendar </p>
+         </div>
+        </div>
+        <div class="dd" style="display: flex;position: relative; left: 40px; top: 30px;">
+          <h3>Documentation  <i class="fa-solid fa-plus" style="color: #d1d2d6;   padding-left: 150px;"></i></h3> <h3 style="padding-left: 30px;"> To Do  <i class="fa-solid fa-plus" style="color: #d1d2d6;   padding-left: 190px"></i></h3> <h3 style="padding-left: 50px;">Ongoing <i class="fa-solid fa-plus" style="color: #d1d2d6;  padding-left: 150px;"></i></h3> <h3 style="padding-left: 50px;">Done<i class="fa-solid fa-plus" style="color: #d1d2d6;  padding-left: 210px;"></i></h3>
+        </div>
+        <div class="box" style="width: 280px; height: 280px; background-color: #fff; border-radius: 8px; position: relative; top: 20px; left: 20px;">
+          <span style="width: 50px; border-radius: 8px; background: #3b94e79b; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Easy</span>
+          <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+          <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+           <div class="img">
+               <img src="lll.png" alt="" style="width: 270px; height: 120px; position: relative;left: 50px; top: 70px;">
+           </div>
+          </div>
+        <div class="box" style="width: 280px; height: 200px; background-color: #fff; border-radius: 8px; position: relative; top: -280px; left: 340px;">
+          <span style="width: 50px; border-radius: 8px;color: orange; background: #f3a81d92; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Medium</span>
+          <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+          <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+           <div class="img">
+               <img src="lllllll.png" alt="" style="width: 270px; height: 40px; position: relative;left: 50px; top: 70px;">
+           </div>
+       </div>
+       <div class="box" style="width: 280px; height: 280px; background-color: #fff; border-radius: 8px; position: relative; top: -500px; left: 650px;">
+        <span style="width: 50px; border-radius: 8px; background: #3b94e79b; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Easy</span>
+        <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+        <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+         <div class="img">
+             <img src="lll.png" alt="" style="width: 270px; height: 120px; position: relative;left: 50px; top: 70px;">
+         </div>
+        </div>
+        <div class="box" style="width: 280px; height: 200px; background-color: #fff; border-radius: 8px; position: relative; top: -800px; left: 940px;">
+          <span style="width: 50px; border-radius: 8px;color: orange; background: #f3a81d92; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Medium</span>
+          <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+          <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+           <div class="img">
+               <img src="lllllll.png" alt="" style="width: 270px; height: 40px; position: relative;left: 50px; top: 70px;">
+           </div>
+       </div>
+       <div class="box" style="width: 280px; height: 200px; background-color: #fff; border-radius: 8px; position: relative; top: -710px; left: 20px;">
+        <span style="width: 50px; border-radius: 8px;color: orange; background: #f3a81d92; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Medium</span>
+        <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+        <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+         <div class="img">
+             <img src="lllllll.png" alt="" style="width: 270px; height: 40px; position: relative;left: 50px; top: 70px;">
+         </div>
+     </div>
+     <div class="box" style="width: 280px; height: 200px; background-color: #fff; border-radius: 8px; position: relative; top: -1010px; left: 340px;">
+      <span style="width: 50px; border-radius: 8px;color: orange; background: #f3a81d92; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Medium</span>
+      <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+      <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+       <div class="img">
+           <img src="lllllll.png" alt="" style="width: 270px; height: 40px; position: relative;left: 50px; top: 70px;">
+       </div>
+   </div>
+   <div class="box" style="width: 280px; height: 200px; background-color: #fff; border-radius: 8px; position: relative; top: -1010px; left: 340px;">
+    <span style="width: 50px; border-radius: 8px;color: orange; background: #f3a81d92; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Medium</span>
+    <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+    <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+     <div class="img">
+         <img src="lllllll.png" alt="" style="width: 270px; height: 40px; position: relative;left: 50px; top: 70px;">
+     </div>
+ </div>
+ <div class="box" style="width: 280px; height: 280px; background-color: #fff; border-radius: 8px; position: relative; top: -1460px; left: 942px;">
+  <span style="width: 50px; border-radius: 8px; background: #3b94e79b; padding: 5px 10px; position: relative; top: 30px; left: 10px;">Easy</span>
+  <h3  style="position: relative; top: 40px; left: 10px;">Moodboard</h3>
+  <p style="text-align: justify; position: relative; top: 40px; padding: 10px; overflow: hidden;">Lorem ipsum dolor sit t consectetur adipisicing elit. Numquam facere aliquid accusantium voluptas?</p>
+   <div class="img">
+       <img src="lll.png" alt="" style="width: 270px; height: 120px; position: relative;left: 50px; top: 70px;">
+   </div>
+  </div>
+       </div>
+       <!-- <img src="rrrr.png" alt=""> -->
+</section>
+   <section class="my">
+    <div class="header1">
+        <h1 style="position: relative;left: 40px;">My Task</h1>
+       <div class="left">
+        <div class="input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search anything...">
+        </div>
+        <i class="fa-solid fa-bell" style="position: relative; bottom: 45px; right: 70px;"></i>
+        <img class="img" src="jackson.jpg" alt=""><p style=" position: relative;
+        bottom: 65px; left: 10px; ">Jackson Pierce <i class="fa-solid fa-caret-down" style="color: #afb5c0;"></i></p>
+       </div>
+       </div>
+       <div class="talk">
+      <div class="headd" style="display: flex; justify-content: space-between;">
+        <h1 style="position: relative; left: 50px;">Assigned</h1>
+        <p style="color: grey; position: relative; left: 590px;"><i class="fa-regular fa-circle-check"></i> All Task  <p style="color: grey; position: relative;left: 290px;"><i class="fa-solid fa-arrow-up-wide-short"></i> Short</p></p>
+       
+      </div>
+        <div class="page" style="width: 94%; height: 500px; background-color: #fff; margin: 10px 40px; border-radius: 8px; color: grey; ">
+            <div class="ppp" style="display: flex; justify-content: space-between; padding: 10px;">
+                <p style="color: grey;">Task</p>
+          <div class="task" style="display: flex; padding-right: 500px; color: grey;">
+            <p style="position: relative; left: 10px;">DueDate</p>
+            <p  style="position: relative; left: 40px;">Priority</p>
+            <p  style="position: relative; left: 120px;">Objective</p>
+            <p  style="position: relative; left: 230px;">Status</p>
+            <p  style="position: relative; left: 347px;">Project</p>
+          </div>
+
+            </div>
+           <div class="h4">
+            <h4 style="position: relative; padding: 5px 19px; color: #000;"><i class="fa-regular fa-circle" style="color:grey; "></i> Design feedback on wireframe</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              
+              <h4 style="position: relative; padding: 5px 19px; color: grey;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i> Moodboarding</h4>
+              <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                  <p style="position: relative; left: 10px;"> 7 Oct</p>
+                  <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                  <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                  <p  style="position: relative; left: 220px;">Ongoing</p>
+                  <p  style="position: relative; left: 320px;">Bookum App</p>
+                </div>
+                <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i> Design feedback on wireframe</h4>
+                <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                    <p style="position: relative; left: 10px;"> 7 Oct</p>
+                    <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                    <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                    <p  style="position: relative; left: 220px;">Ongoing</p>
+                    <p  style="position: relative; left: 320px;">Bookum App</p>
+                  </div>
+                <h4 style="position: relative; padding: 5px 19px; color: grey;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i> UI Design feedback on  wireframe</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i> Wallets</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px; color: #000;"><i class="fa-regular fa-circle" style="color:grey; "></i> Tab bar on card</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i>UI Iteration</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px; color: #000;"> <i class="fa-regular fa-circle" style="color:grey; "></i>Activity/ Inbox advance filter</h4>
+               <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i>Moodboarding</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+              <h4 style="position: relative; padding: 5px 19px;"><i class="fa-solid fa-circle-chevron-down" style="color: rgb(17, 224, 17); position: relative;"></i>UI Iteration</h4>
+            <div class="task" style="display: flex; padding-left: 410px; position: relative; top: -23px;">
+                <p style="position: relative; left: 10px;"> 7 Oct</p>
+                <p  style="position: relative; left: 60px;"><i class="fa-solid fa-flag" style="color: red;"></i> Hard</p>
+                <p  style="position: relative; left: 140px;"><i class="fa-solid fa-list-ul"></i> 3 Objective</p>
+                <p  style="position: relative; left: 220px;">Ongoing</p>
+                <p  style="position: relative; left: 320px;">Bookum App</p>
+              </div>
+          
+           </div>
+        </div>
+       </div>
+   </section> 
+   <section class="setting">
+    <div class="header">
+      <h1 style="position: relative;left: 40px;">Setting</h1>
+     <div class="left">
+      <div class="input">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search anything...">
+      </div>
+      <i class="fa-solid fa-bell" style="position: relative; bottom: 45px; right: 70px;"></i>
+      <img class="img" src="jackson.jpg" alt=""><p style=" position: relative;
+      bottom: 65px; left: 10px; ">Jackson Pierce <i class="fa-solid fa-caret-down" style="color: #afb5c0;"></i></p>
+     </div>
+     </div>
+     <div class="pag" style="width: 95%; height:900px; background: #fff; margin: 10px 20px;" >
+      <ul>
+        <li> Project</li>
+        <li>My task</li>
+        <li> Activity</li>
+        <li> Team</li>
+        <li>Message</li>
+        
+     </ul>
+     <div class="imgg" style="float: right; width: 80%; display: flex;">
+      <img src="jackson.jpg" alt="" style="width: 100px; border-radius: 50%; position: relative;bottom: 140px; right: 100px;">
+      <h4 style="position: relative; bottom: 100px; right: 80px;">jackson PIERCE <br><span style="color: grey;">@tatriano2013</span></h4>
+      <button style="color: #fff; background: #131358; width: 150px; height: 50px; border-radius: 12px; padding: 5px; position: relative; left: 490px; bottom: 120px;">Edit use profile</button>
+     
+    </div>
+   <div class="imggg">
+    <img src="ss.png" alt="" style="width: 950px;position: relative; left: 150px; bottom: 120px;">
+   </div>
+   <h2 style="position: relative;left: 150px;">PASSWORD AND NOTIFICATION</h2>
+   <p style="position: relative;left: 150px; width: 800px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste fugiat modi unde vero consequatur obcaecati saepe doloribus iusto, rerum ab nesciunt commodi hic, vel iure in ad dicta nemo cum.</p>
+   <button style="color: #fff; background: #131358; width: 150px; height: 50px; border-radius: 12px; padding: 5px; position: relative; left: 150px; top: 10px;">Edit use profile</button>
+   <br><br><br>
+   <h2 style="position: relative;left: 150px;">PASSWORD AND NOTIFICATION</h2>
+   <p style="position: relative;left: 150px; width: 800px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste fugiat modi unde vero consequatur obcaecati saepe doloribus iusto, rerum ab nesciunt commodi hic, vel iure in ad dicta nemo cum.</p>
+   <button style="color: #fff; background: #131358; width: 150px; height: 50px; border-radius: 12px; padding: 5px; position: relative; left: 150px; top: 10px;">Edit use profile</button>
+  
+  </div>
+   
+     
+   </section>
+</body>
+</html>
